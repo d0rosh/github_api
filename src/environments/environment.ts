@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: 'AIzaSyDjQrRtqirnHG9dv8_WnuUDfjWd49eqLzw',
-    authDomain: 'https://enigmatic-lowlands-87871.herokuapp.com',
+    authDomain: 'g5en-9a3a0.firebaseapp.com',
     databaseURL: 'https://g5en-9a3a0.firebaseio.com',
     projectId: 'g5en-9a3a0',
     storageBucket: '',
