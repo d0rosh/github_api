@@ -4,16 +4,16 @@
     <a routerLink="/blocks" routerLinkActive="active">Blocks</a>
     <a routerLink="/table" routerLinkActive="active">Table</a>
   </nav>
-  <div class="auth-menu" *ngIf="!authService.isAuthenticated()">
+  <div class="auth-menu" *ngIf="!isAuth()">
     <a routerLink="/auth" [queryParams]="{ form: 'login' }">Sign-In</a>
     <a routerLink="/auth" [queryParams]="{ form: 'register' }">Sign-Up</a>
   </div>
-  <div class="user-info" *ngIf="authService.isAuthenticated()">
+  <div class="user-info" *ngIf="isAuth()">
     <span>{{ authService.getUserProfile().email }}</span>
     <img
       [src]="
-        authService.getUserProfile().photoURL
-          ? authService.getUserProfile().photoURL
+        getProfile().photoURL
+          ? getProfile().photoURL
           : '../../assets/img/default-user.png'
       "
       alt="img"

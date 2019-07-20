@@ -14,4 +14,12 @@ export class HeaderComponent {
     this.authService.logout();
     this.router.navigate(['/auth']);
   }
+
+  getProfile() {
+    return this.authService.getUserProfile();
+  }
+
+  isAuth() {
+    return this.authService.isAuthenticated();
+  }
 }
