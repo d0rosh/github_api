@@ -1,0 +1,19 @@
+<div class="container" *ngIf="user">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card mb-3">
+        <img [src]="user.avatar_url" class="card-img-top" alt="avatar" />
+        <div class="card-body">
+          <h5 class="card-title">{{ user.login }}</h5>
+          <p class="card-text">{{ user.type }}</p>
+          <a
+            href="https://github.com/{{ user.login }}"
+            target="_blank"
+            class="card-link"
+            >Repository link</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

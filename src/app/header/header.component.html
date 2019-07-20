@@ -1,0 +1,25 @@
+<header>
+  <div class="logo"><img src="../../assets/img/logo.png" alt="logo" /></div>
+  <nav class="nav-menu">
+    <a routerLink="/blocks" routerLinkActive="active">Blocks</a>
+    <a routerLink="/table" routerLinkActive="active">Table</a>
+  </nav>
+  <div class="auth-menu" *ngIf="!authService.isAuthenticated()">
+    <a routerLink="/auth" [queryParams]="{ form: 'login' }">Sign-In</a>
+    <a routerLink="/auth" [queryParams]="{ form: 'register' }">Sign-Up</a>
+  </div>
+  <div class="user-info" *ngIf="authService.isAuthenticated()">
+    <span>{{ authService.getUserProfile().email }}</span>
+    <img
+      [src]="
+        authService.getUserProfile().photoURL
+          ? authService.getUserProfile().photoURL
+          : '../../assets/img/default-user.png'
+      "
+      alt="img"
+    />
+    <button type="button" class="btn btn-dark" (click)="logout()">
+      Logout
+    </button>
+  </div>
+</header>

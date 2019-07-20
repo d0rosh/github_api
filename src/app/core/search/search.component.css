@@ -1,0 +1,12 @@
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group input {
+  margin-right: 30px;
+}
+
+.spinner-wrapper {
+  text-align: center;
+}

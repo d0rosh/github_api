@@ -1,0 +1,38 @@
+a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+a.active {
+  color: red;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  height: 80px;
+  margin-bottom: 50px;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header .user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .user-info img {
+  height: 50px;
+  display: block;
+  margin: 0 20px;
+}

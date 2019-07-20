@@ -1,0 +1,12 @@
+.container {
+  height: calc(100vh - 80px);
+}
+
+.container .row {
+  align-items: center;
+  height: 100%;
+}
+
+.spinner-wrapper {
+  text-align: center;
+}

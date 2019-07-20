@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="form-group">
+          <input
+            type="text"
+            name="search"
+            [(ngModel)]="search"
+            class="form-control"
+            placeholder="Search"
+          />
+          <button type="button" (click)="searchUser()" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="spinner-wrapper">
+    <app-spinner [visible]="visibleSpinner"></app-spinner>
+  </div>
+</div>

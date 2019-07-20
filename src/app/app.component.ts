@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './core/auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'G5';
+  constructor(private AuthService: AuthService) {
+    this.AuthService.initCurrentUser();
+  }
 }

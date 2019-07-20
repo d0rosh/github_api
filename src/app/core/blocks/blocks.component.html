@@ -1,0 +1,13 @@
+<app-search (getResult)="getResult($event)"></app-search>
+
+<div class="container" *ngIf="users">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        <li *ngFor="let user of users" class="list-group-item">
+          <a [routerLink]="['/detail', user.login]">{{ user.login }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
